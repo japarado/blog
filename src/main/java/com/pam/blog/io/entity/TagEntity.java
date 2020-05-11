@@ -23,6 +23,6 @@ public class TagEntity implements Serializable
     @Column
     private String description;
 
-//    @ManyToMany(mappedBy = "tags")
-//    private List<PostEntity> posts;
+    @ManyToMany(mappedBy = "tags")
+    private List<PostEntity> posts;
 }

@@ -37,11 +37,11 @@ public class PostEntity implements Serializable
     @JsonManagedReference
     private UserEntity user;
 
-//    @ManyToMany
-//    @JoinTable(
-//            name = "post_tags",
-//            joinColumns = @JoinColumn(name = "post_id"),
-//            inverseJoinColumns = @JoinColumn(name = "tag_id")
-//    )
-//    private List<TagEntity> tags;
+    @ManyToMany
+    @JoinTable(
+            name = "post_tags",
+            joinColumns = @JoinColumn(name = "post_id"),
+            inverseJoinColumns = @JoinColumn(name = "tag_id")
+    )
+    private List<TagEntity> tags;
 }
